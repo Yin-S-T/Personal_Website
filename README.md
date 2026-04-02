@@ -135,7 +135,7 @@ public/
 
 ---
 
-## 4) 内容修改指南（最常改）
+## 4) 内容修改指南
 
 ### 4.1 修改全站文案（推荐入口）
 - 文件：`src/i18n.tsx`
@@ -165,8 +165,9 @@ public/
 - 文件：`src/data/socialLinks.ts`
 
 ---
+## 4) 项目部署与测试
 
-## A. 在 Vercel 上部署（5 分钟）
+### A. 在 Vercel 上部署（5 分钟）
 
 1. 打开 https://vercel.com
 2. 点 `Sign Up` -> 选 `Continue with GitHub`
@@ -181,7 +182,7 @@ public/
 
 ---
 
-## B. 绑定你的域名 `songyintang.com`
+### B. 绑定你的域名 `songyintang.com`
 
 在 Vercel 项目页面：
 
@@ -191,7 +192,7 @@ public/
 
 ---
 
-## C. 在 Namecheap 配置 DNS
+### C. 在 Namecheap 配置 DNS
 
 1. 登录 Namecheap
 2. 找到 `songyintang.com` -> 点 `Manage`
@@ -208,7 +209,7 @@ public/
 
 ---
 
-## D. 等待 DNS 生效 + 验证
+### D. 等待 DNS 生效 + 验证
 
 - DNS 生效通常 5~30 分钟（最慢几小时）
 - 回到 Vercel，刷新 Domains 页面，看是否显示 `✓ Valid Configuration`
@@ -216,7 +217,7 @@ public/
 
 ---
 
-## 完整流程总结
+### 完整流程总结
 
 ```
 GitHub 代码 ✅
@@ -237,7 +238,7 @@ https://songyintang.com 上线 ✅
 ---
 
 
-## 6) GitHub 上传前检查
+## 5) GitHub 上传前检查
 
 - [ ] `src/data/socialLinks.ts` 中邮箱/链接是否为你最终版本
 - [ ] `src/data/projects.ts` 中仓库链接是否真实可访问
@@ -247,7 +248,7 @@ https://songyintang.com 上线 ✅
 
 ---
 
-## 7) 未来扩展建议
+## 6) 未来扩展建议
 
 - 把博客数据从 `Blog.tsx` 抽到 `src/data/blogPosts.ts`
 - 增加 `siteContent.ts` 统一管理首页/关于页文案
