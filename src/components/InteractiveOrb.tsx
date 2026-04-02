@@ -16,22 +16,22 @@ const sceneData = {
     pos: '8% 68%',
     scale: 1.34,
     rotate: -3,
-    captionZh: '诺坎普区域：像 A* 搜索一样，边路启发式引导中路最优解。',
-    captionEn: 'Camp Nou zone: like A* search, wing heuristics guiding the central optimum.',
+    captionZh: '诺坎普：像 A* 搜索一样，边路启发式引导中路最优解。',
+    captionEn: 'Camp Nou: like A* search, wing heuristics guiding the central optimum.',
   },
   paris: {
     pos: '52% 20%',
     scale: 1.24,
     rotate: 0.5,
-    captionZh: '巴黎区域：铁塔像位置编码，同一特征在不同时刻拥有不同语义。',
-    captionEn: 'Paris zone: the tower acts like positional encoding, same features carry different semantics over time.',
+    captionZh: '巴黎：铁塔像位置编码，同一特征在不同时刻拥有不同语义。',
+    captionEn: 'Paris: the tower acts like positional encoding, same features carry different semantics over time.',
   },
   argentina: {
     pos: '50% 86%',
     scale: 1.38,
     rotate: 2.6,
-    captionZh: '阿根廷瀑布区域：像梯度流，沿最陡方向更新直到收敛。',
-    captionEn: 'Argentina waterfall zone: like gradient flow, updating along steepest descent until convergence.',
+    captionZh: '阿根廷瀑布：像梯度流，沿最陡方向更新直到收敛。',
+    captionEn: 'Argentina waterfall: like gradient flow, updating along steepest descent until convergence.',
   },
 } as const;
 
