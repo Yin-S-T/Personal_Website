@@ -180,7 +180,7 @@ public/
 7. 点 `Deploy`，等待完成（通常 1~3 分钟）
 8. 部署成功后，你会看到一个临时域名（如 `personal-website-xxx.vercel.app`）
 
----
+
 
 ### B. 绑定你的域名 `songyintang.com`
 
@@ -190,7 +190,7 @@ public/
 2. 输入 `songyintang.com`，点 `Add`
 3. Vercel 会给你一个 DNS 记录（通常是 `A` 记录或 `CNAME`）
 
----
+
 
 ### C. 在 Namecheap 配置 DNS
 
@@ -207,7 +207,7 @@ public/
 
 5. 保存
 
----
+
 
 ### D. 等待 DNS 生效 + 验证
 
@@ -215,7 +215,7 @@ public/
 - 回到 Vercel，刷新 Domains 页面，看是否显示 `✓ Valid Configuration`
 - 打开 `https://songyintang.com` 测试
 
----
+
 
 ### 完整流程总结
 
