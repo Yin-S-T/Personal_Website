@@ -165,7 +165,7 @@ public/
 - 文件：`src/data/socialLinks.ts`
 
 ---
-## 4) 项目部署与测试
+## 5) 项目部署与测试
 
 ### A. 在 Vercel 上部署（5 分钟）
 
@@ -238,7 +238,7 @@ https://songyintang.com 上线 ✅
 ---
 
 
-## 5) GitHub 上传前检查
+## 6) GitHub 上传前检查
 
 - [ ] `src/data/socialLinks.ts` 中邮箱/链接是否为你最终版本
 - [ ] `src/data/projects.ts` 中仓库链接是否真实可访问
@@ -248,7 +248,7 @@ https://songyintang.com 上线 ✅
 
 ---
 
-## 6) 未来扩展建议
+## 7) 未来扩展建议
 
 - 把博客数据从 `Blog.tsx` 抽到 `src/data/blogPosts.ts`
 - 增加 `siteContent.ts` 统一管理首页/关于页文案
