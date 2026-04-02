@@ -1,6 +1,6 @@
 # TSY Web
 
-#Hi,I'm yin.This is my personal web with lots of funny things on and to be explored.
+Hi,I'm yin.This is my personal web with lots of funny things on and to be explored.
 
 
                         _ooOoo_
