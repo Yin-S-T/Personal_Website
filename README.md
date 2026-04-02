@@ -166,51 +166,76 @@ public/
 
 ---
 
-## 5) 上线部署+测试
+## A. 在 Vercel 上部署（5 分钟）
 
-###A. 在 Vercel 上部署（5 分钟）
--打开 https://vercel.com
--点 Sign Up -> 选 Continue with GitHub
--授权 GitHub 账号
--回到 Vercel，点 Add New Project
--找到 Personal_Website 仓库，点 Import
--框架自动识别为 Vite，确认：
--Build Command: npm run build
--Output Directory: dist
--点 Deploy，等待完成（通常 1~3 分钟）
--部署成功后，你会看到一个临时域名（如 personal-website-xxx.vercel.app）
-###B. 绑定你的域名 songyintang.com（关键）
--在 Vercel 项目页面：
--点 Settings -> Domains
--输入 songyintang.com，点 Add
--Vercel 会给你一个 DNS 记录（通常是 A 记录或 CNAME）
-###C. 在 Namecheap 配置 DNS（最重要）
--登录 Namecheap
-[用 CNAME 方式（更简单）：]
--找 Advanced DNS 或 DNS Records
--添加一条 CNAME 记录：
--Host: @（或 songyintang.com）
--Value: cname.vercel-dns.com（Vercel 会给你确切值）
--保存
-###D. 等待 DNS 生效 + 验证
--DNS 生效通常 5~30 分钟（最慢几小时）
--回到 Vercel，刷新 Domains 页面，看是否显示 ✓ Valid Configuration
--打开 https://songyintang.com 测试
+1. 打开 https://vercel.com
+2. 点 `Sign Up` -> 选 `Continue with GitHub`
+3. 授权 GitHub 账号
+4. 回到 Vercel，点 `Add New Project`
+5. 找到 `Personal_Website` 仓库，点 `Import`
+6. 框架自动识别为 `Vite`，确认：
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+7. 点 `Deploy`，等待完成（通常 1~3 分钟）
+8. 部署成功后，你会看到一个临时域名（如 `personal-website-xxx.vercel.app`）
 
-###完整流程总结
+---
+
+## B. 绑定你的域名 `songyintang.com`
+
+在 Vercel 项目页面：
+
+1. 点 `Settings` -> `Domains`
+2. 输入 `songyintang.com`，点 `Add`
+3. Vercel 会给你一个 DNS 记录（通常是 `A` 记录或 `CNAME`）
+
+---
+
+## C. 在 Namecheap 配置 DNS
+
+1. 登录 Namecheap
+2. 找到 `songyintang.com` -> 点 `Manage`
+3. 找 `Nameservers` 或 `DNS Settings`
+4. 改成 Vercel 的 nameservers（Vercel 会告诉你具体值）
+
+   或者用 `CNAME` 方式（推荐）：
+   - 找 `Advanced DNS` 或 `DNS Records`
+   - 添加一条 `CNAME` 记录：
+     - Host: `@`（或 `songyintang.com`）
+     - Value: `cname.vercel-dns.com`（Vercel 会给你确切值）
+
+5. 保存
+
+---
+
+## D. 等待 DNS 生效 + 验证
+
+- DNS 生效通常 5~30 分钟（最慢几小时）
+- 回到 Vercel，刷新 Domains 页面，看是否显示 `✓ Valid Configuration`
+- 打开 `https://songyintang.com` 测试
+
+---
+
+## 完整流程总结
+
+```
 GitHub 代码 ✅
-  ↓
+    ↓
 Vercel 导入 GitHub 仓库
-  ↓
+    ↓
 Vercel 自动部署到 vercel.app 临时域名
-  ↓
+    ↓
 Vercel 生成 DNS 记录
-  ↓
+    ↓
 Namecheap 配置 DNS 指向 Vercel
-  ↓
+    ↓
 DNS 生效（5~30 分钟）
-  ↓
+    ↓
 https://songyintang.com 上线 ✅
+```
+
+---
+
 
 ## 6) GitHub 上传前检查
 
