@@ -1,5 +1,19 @@
 # TSY Web
 
+#Hi,this is my personal web with lots of funny things.
+
+
+                                                  #########
+                                        ############################
+########################################                            ###########################################
+                                        If you have a interest in me
+                                        just explore my web on
+                                        https://www.songyintang.com
+########################################                            ###########################################
+                                        ############################
+                                                  #########
+
+                                                  
 个人科研主页（React + Vite + TypeScript），包含：
 - 首页主视觉 + Claude Code Crab 动画
 - 可拖拽水晶球场景交互
@@ -137,46 +151,54 @@ public/
 
 ---
 
-## 5) 上线部署
+## 5) 上线部署+测试
 
-> 这是 Vite 静态站点，本质只需要托管 `dist/`。
+A. 在 Vercel 上部署（5 分钟）
+打开 https://vercel.com
+点 Sign Up -> 选 Continue with GitHub
+授权 GitHub 账号
+回到 Vercel，点 Add New Project
+找到 Personal_Website 仓库，点 Import
+框架自动识别为 Vite，确认：
+Build Command: npm run build
+Output Directory: dist
+点 Deploy，等待完成（通常 1~3 分钟）
+部署成功后，你会看到一个临时域名（如 personal-website-xxx.vercel.app）
+C. 绑定你的域名 songyintang.com（关键）
+在 Vercel 项目页面：
+点 Settings -> Domains
+输入 songyintang.com，点 Add
+Vercel 会给你一个 DNS 记录（通常是 A 记录或 CNAME）
+D. 在 Namecheap 配置 DNS（最重要）
+登录 Namecheap
+找到 songyintang.com -> 点 Manage
+找 Nameservers 或 DNS Settings
+改成 Vercel 的 nameservers（Vercel 会告诉你具体值）
+或者用 CNAME 方式（更简单）：
+找 Advanced DNS 或 DNS Records
+添加一条 CNAME 记录：
+Host: @（或 songyintang.com）
+Value: cname.vercel-dns.com（Vercel 会给你确切值）
+保存
+E. 等待 DNS 生效 + 验证
+DNS 生效通常 5~30 分钟（最慢几小时）
+回到 Vercel，刷新 Domains 页面，看是否显示 ✓ Valid Configuration
+打开 https://songyintang.com 测试
 
-### 方案 A（最省心，推荐）
-1. `Vercel`
-2. `Netlify`
-3. `Cloudflare Pages`
-
-优点：
-- 不需要自己维护服务器
-- 自动 HTTPS
-- 自动 CI/CD（连接 GitHub 即可）
-- 对前端站点最友好
-
-### 方案 B（你提到的“租服务器”）
-推荐系统：`Ubuntu 22.04 LTS`
-
-常见 VPS 选择：
-- `Hetzner`（性价比高）
-- `Vultr` / `DigitalOcean`（易上手）
-- 国内可考虑阿里云/腾讯云轻量
-
-最简上线流程：
-1. 本地构建：`npm run build`
-2. 服务器安装 `Nginx`
-3. 上传 `dist/` 到 `/var/www/tsy-web`
-4. Nginx 指向该目录并配置 `try_files`
-5. 域名解析到服务器 IP
-6. 用 `certbot` 配置 HTTPS
-
-Nginx 单页应用关键配置（history 路由）：
-
-```nginx
-location / {
-  try_files $uri $uri/ /index.html;
-}
-```
-
----
+完整流程总结
+GitHub 代码 ✅
+  ↓
+Vercel 导入 GitHub 仓库
+  ↓
+Vercel 自动部署到 vercel.app 临时域名
+  ↓
+Vercel 生成 DNS 记录
+  ↓
+Namecheap 配置 DNS 指向 Vercel
+  ↓
+DNS 生效（5~30 分钟）
+  ↓
+https://songyintang.com 上线 ✅
 
 ## 6) GitHub 上传前检查
 
@@ -193,3 +215,4 @@ location / {
 - 把博客数据从 `Blog.tsx` 抽到 `src/data/blogPosts.ts`
 - 增加 `siteContent.ts` 统一管理首页/关于页文案
 - 接入简单 CMS（如 Notion/Contentlayer）做博客自动化更新
+- 优化页面内容、不断更新个人网页
